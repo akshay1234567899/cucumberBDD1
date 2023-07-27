@@ -4,8 +4,8 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class Readconfig {
-    Properties properties;
-    String path = "/Users/akshaydhiman/IdeaProjects/cucumber_001/src/test/java/Configration/Config.properties";
+    public static Properties properties;
+    public static String path = "/Users/akshaydhiman/IdeaProjects/cucumber_001/src/test/java/Configration/Config.properties";
    //constructor of class
     public  Readconfig() {
         properties= new Properties();

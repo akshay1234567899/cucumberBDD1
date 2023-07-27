@@ -24,39 +24,39 @@ public class Stepdef extends Baseclass {
 //}
 
 
-//    public void setup(){
-//        readconfig= new Readconfig();
-//        String browser= readconfig.getBrowser();
-//
-//        switch (browser.toLowerCase()){
-//            case"chrome":
-//                WebDriverManager.chromedriver().setup();
-//                driver=new ChromeDriver();
-//                driver.manage().deleteAllCookies();
-//                driver.manage().window().maximize();
-//                break;
-//
-//            case "edge":
-//                WebDriverManager.edgedriver().setup();
-//                driver=new EdgeDriver();
-//                break;
-//
-//            case "firfox":
-//                WebDriverManager.firefoxdriver().setup();
-//                driver=new FirefoxDriver();
-//                break;
-//
-//            default:
-//                driver=null;
-//                break;
-//        }
-//    }
+    public void setup(){
+        readconfig= new Readconfig();
+        String browser= readconfig.getBrowser();
+
+        switch (browser.toLowerCase()){
+            case"chrome":
+                WebDriverManager.chromedriver().setup();
+                driver=new ChromeDriver();
+                driver.manage().deleteAllCookies();
+                driver.manage().window().maximize();
+                break;
+
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                driver=new EdgeDriver();
+                break;
+
+            case "firfox":
+                WebDriverManager.firefoxdriver().setup();
+                driver=new FirefoxDriver();
+                break;
+
+            default:
+                driver=null;
+                break;
+        }
+    }
 
 @Given("launch chrome browser")
 public void launch_chrome_browser()  {
 
-    WebDriverManager.chromedriver().setup();
-    driver=new ChromeDriver();
+//    WebDriverManager.chromedriver().setup();
+//    driver=new ChromeDriver();
 
 
     login= new Login(driver);
@@ -144,7 +144,8 @@ public void user_click_on_logout_button() {
 
     @When("User enter customer infotmation")
     public void user_enter_customer_infotmation() {
-       addnewcustomer.entermail(RandomemailID()+"@gmail.com");
+
+        addnewcustomer.entermail(RandomemailID()+"@gmail.com");
        addnewcustomer.enterpass("demo@1234");
        addnewcustomer.enter_name("demo1");
        addnewcustomer.entlastname("test");

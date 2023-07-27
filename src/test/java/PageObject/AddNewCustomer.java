@@ -66,7 +66,7 @@ public class AddNewCustomer {
     }
 
     public void entermail(String s){
-        enteremail.sendKeys("demotest123@gmail.com");
+        enteremail.sendKeys();
     }
 
     public void enterpass(String s){
